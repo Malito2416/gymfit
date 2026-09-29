@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: dreamfit-backend
+    runtime: node
+    plan: free
+    region: ohio
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_TYPE
+        value: sqlite
